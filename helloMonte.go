@@ -10,7 +10,12 @@ import (
 
 func main() {
 	http.HandleFunc("/", helloMonte)
-    http.ListenAndServe(":8080", nil)
+	fmt.Println("listening...")
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+    if err != nil {
+      panic(err)
+    }
+    //http.ListenAndServe(":8080", nil)
 	//fmt.Println("Hello World!")
 	//fmt.Println(mathutil.CalculatePi(10000))
 }
