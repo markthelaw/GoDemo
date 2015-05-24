@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<head>
+	<title>Tutorial</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="MonteController as monte">
+
+
+<br />
+Times: <input type="text" ng-model="times" valid-number>
+<br />
+Pi: {{value}}
+<br/>
+<button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
