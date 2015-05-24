@@ -17,6 +17,12 @@ type MontePI struct {
 	Pi float32
 }
 
+func serveSingle(pattern string, filename string) {
+    http.HandleFunc(pattern, func(w http.ResponseWriter, r *http.Request) {
+        http.ServeFile(w, r, filename)
+    })
+}
+
 func main() {
 	r := mux.NewRouter()
 	//r.PathPrefix("/web").Handler(http.FileServer(http.Dir("./web")))
@@ -25,7 +31,11 @@ func main() {
 	
 	//http.HandleFunc("/monte/", helloMonte)
 	fmt.Println("listening...")
+	
+	serveSingle("/favicon.ico", "./favicon.ico")
+	
 	http.Handle("/", r)
+
 	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
     if err != nil {
       panic(err)

@@ -1,26 +1,56 @@
 <!DOCTYPE html>
-<html>
-<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Monte PI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
 	<title>Tutorial</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	
+	<link rel="stylesheet" href="app.css">
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
-<body>
 
-<div ng-app="myApp" ng-controller="MonteController as monte">
+  <body>
+	<div ng-app="myApp" ng-controller="MonteController as monte">
+    <div class="container">
+	
+		<h2>Monte PI</h2>
 
+		<form class="form-horizontal">
+		  <div class="control-group">
+			<label class="control-label" for="inputEmail">Times:</label>
+			<div class="controls">
+			  <input type="text" ng-model="times" valid-number>
+			</div>
+		  </div>
+		  <div class="control-group">
+			<label class="control-label" for="inputPassword">Pi:</label>
+			<div class="controls">
+			  {{value}} 
+			</div>
+		  </div>
+		  <div class="control-group">
+			<div class="controls">
+			  <button type="submit" class="btn btn-success" ng-click="myData.doClick(item, $event)">Send</button>
+			</div>
+		  </div>
+		</form>
 
-<br />
-Times: <input type="text" ng-model="times" valid-number>
-<br />
-Pi: {{value}}
-<br/>
-<button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
-</div>
+    </div> <!-- /container -->
 
-<script src="app.js"></script>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
 
-</body>
+	<script src="app.js"></script>
+  </body>
 </html>
