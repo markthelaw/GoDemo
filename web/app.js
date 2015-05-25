@@ -11,11 +11,11 @@ app.controller('MonteController', ['$http', '$log', '$scope', function($http, $l
 			url: "/monte/" + $scope.times			
 		});
 		responsePromise.success(function(data, status, headers, config) {
-                    $scope.value = data.Pi;
-                });
-                responsePromise.error(function(data, status, headers, config) {
-                    alert("AJAX failed!");
-                });
+            $scope.value = data.Pi;
+        });
+        responsePromise.error(function(data, status, headers, config) {
+            alert("AJAX failed!");
+        });
 	};
 }]);
 

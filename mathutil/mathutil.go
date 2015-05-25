@@ -13,9 +13,9 @@ import (
 //	fmt.Println(calculatePi(1000000))
 //}
 
-func CalculatePi(times int) float32{
+func CalculatePi(times int) float64{
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	sum:=float32(0)
+	sum:=float64(0)
 	if times<0 {
 		times = -times
 	}
@@ -30,7 +30,7 @@ func CalculatePi(times int) float32{
 	}
 	//fmt.Println(sum)
 	//fmt.Println(float32(times))
-	return sum/float32(times)*4
+	return sum/float64(times)*4
 }
 
 func inSideCircle(x float64, y float64)bool{

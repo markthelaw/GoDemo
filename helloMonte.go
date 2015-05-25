@@ -14,7 +14,7 @@ import (
 
 type MontePI struct {
 	Times int64
-	Pi float32
+	Pi float64
 }
 
 func serveSingle(pattern string, filename string) {
