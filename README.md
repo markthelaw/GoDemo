@@ -5,4 +5,4 @@ Deploy to heroku:
 
 Increase the number to make PI more accurate.
 
-https://cryptic-cliffs-9881.herokuapp.com/web/
+http://cryptic-cliffs-9881.herokuapp.com/web/
